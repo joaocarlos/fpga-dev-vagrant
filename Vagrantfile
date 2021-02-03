@@ -22,8 +22,8 @@
 
 Vagrant.configure('2') do |config|
   config.vm.box = "bento/ubuntu-20.04"
-  config.vm.synced_folder "./tools/media","/opt/media", disabled: true
-  config.vm.synced_folder "./tools/intelFPGA_lite","/opt/intelFPGA_lite", disabled: false
+  config.vm.synced_folder "./tools/media","/opt/media", disabled: false
+  config.vm.synced_folder "./tools/intel","/opt/intelFPGA", disabled: false
   config.vm.synced_folder "./tools/xilinx","/opt/Xilinx", disabled: true
   config.vm.synced_folder "./vagrant","/vagrant", disabled: false
   config.vm.synced_folder "~/Code/fpga","/FPGA", disabled: true
